@@ -159,6 +159,8 @@
             }
 
             &.active {
+                background: #fff;
+
                 .open__nav--icon {
                     opacity: 0;
                     pointer-events: none;

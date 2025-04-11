@@ -445,6 +445,9 @@ table {
     opacity: 1;
     pointer-events: auto;
   }
+  .site__header .open__nav--toggle.active {
+    background: #fff;
+  }
   .site__header .open__nav--toggle.active .open__nav--icon {
     opacity: 0;
     pointer-events: none;
