@@ -647,7 +647,6 @@
         display: flex;
         flex-direction: column;
         gap: 28px;
-        background-color: red;
     }
 
     &__item {
@@ -656,6 +655,8 @@
         border-radius: 8px;
         background-color: #fff;
     }
+
+
 
     &__question {
         background: none;
@@ -683,14 +684,16 @@
             transform: translateY(-50%);
             width: 20px;
             height: 20px;
-            background-image: url("/dist/images/plus-icon.svg");
+            background-image: url('../images/plus-icon.svg');
+
             background-size: contain;
             background-repeat: no-repeat;
             transition: transform 0.3s ease;
         }
 
         &[aria-expanded="true"]::after {
-            background-image: url("/dist/images/minus-icon.svg");
+            background-image: url('../images/minus-icon.svg');
+
         }
     }
 

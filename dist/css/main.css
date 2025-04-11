@@ -458,13 +458,13 @@ table {
   }
 }
 @media (max-width: 767px) {
-  .site__header a.mobileView.join__now {
+  .site__header .join__now {
     color: #fff;
     text-decoration: none;
     max-width: 100%;
     height: 55px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     background: #EE7231;
     display: inline-flex;
     text-align: center;
@@ -474,9 +474,8 @@ table {
     border-radius: 50px;
     padding: 0 27px;
     text-transform: capitalize;
-    transition: background 0.3s ease;
     display: flex !important;
-    margin: 20px;
+    margin: 30px 20px;
   }
 }
 .site__header.scrolled {
@@ -1371,7 +1370,6 @@ table {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  background-color: red;
 }
 .faq__item {
   border: 1px solid rgba(16, 16, 16, 0.2);
@@ -1405,13 +1403,13 @@ table {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-image: url("/dist/images/plus-icon.svg");
+  background-image: url("../images/plus-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
 }
 .faq__question[aria-expanded=true]::after {
-  background-image: url("/dist/images/minus-icon.svg");
+  background-image: url("../images/minus-icon.svg");
 }
 .faq__answer {
   max-height: 0;
