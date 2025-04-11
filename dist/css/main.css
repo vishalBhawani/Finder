@@ -1576,7 +1576,6 @@ table {
   }
 }
 
-
 .faq__question::after {
   content: "";
   position: absolute;
