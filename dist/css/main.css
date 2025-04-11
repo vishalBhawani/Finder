@@ -1404,13 +1404,13 @@ table {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-image: url("../../../dist/images/plus-icon.svg");
+  background-image: url("/dist/images/plus-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
 }
 .faq__question[aria-expanded=true]::after {
-  background-image: url("../../../dist/images/minus-icon.svg");
+  background-image: url("/dist/images/minus-icon.svg");
 }
 .faq__answer {
   max-height: 0;
