@@ -1,0 +1,19 @@
+{
+  "name": "Finder",
+  "version": "1.0.0",
+  "description": "A clean, scalable HTML and SCSS project setup.",
+  "main": "index.html",
+  "scripts": {
+    "scss": "sass src/scss/main.scss dist/css/main.css --watch",
+    "build-css": "sass src/scss/main.scss dist/css/main.css --style=compressed"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "sass",
+    "frontend",
+    "web-development"
+  ],
+  "author": "Vishal",
+  "license": "MIT"
+}

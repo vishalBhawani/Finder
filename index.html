@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Finder</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+    <!-- Link to compiled SCSS -->
+
+    <link rel="stylesheet" href="dist/css/main.css">
+
+</head>
+
+<body>
+
+    <header class="site__header" id="site-header">
+        <div class="full__container">
+            <div class="header__container">
+                <a href="#" class="header__logo">
+                    <svg width="148" height="30" viewBox="0 0 148 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.697 29.645C4.60433 29.645 3.085 29.172 2.139 28.226C1.22167 27.28 0.763 26.033 0.763 24.485C0.763 23.3097 1.00667 22.0197 1.494 20.615C1.86667 19.4683 2.36833 18.3073 2.999 17.132C3.62967 15.928 4.36067 14.8243 5.192 13.821C6.02333 12.789 6.94067 11.972 7.944 11.37C8.94733 10.7393 10.008 10.424 11.126 10.424C12.5593 10.424 13.7203 10.6533 14.609 11.112C15.5263 11.542 15.985 12.2587 15.985 13.262C15.985 14.0073 15.684 14.939 15.082 16.057C14.2793 17.605 13.104 18.8807 11.556 19.884C10.008 20.8873 8.27367 21.4607 6.353 21.604C5.923 22.7793 5.665 23.7397 5.579 24.485C5.55033 24.6283 5.536 24.7717 5.536 24.915C5.536 25.0297 5.536 25.1587 5.536 25.302C5.536 26.248 5.751 26.936 6.181 27.366C6.611 27.7673 7.14133 27.968 7.772 27.968C8.94733 27.968 9.97933 27.667 10.868 27.065C11.7567 26.463 12.5307 25.7033 13.19 24.786C13.878 23.8687 14.4657 22.9513 14.953 22.034C15.2397 21.518 15.4833 21.045 15.684 20.615C15.8847 20.1563 16.0423 19.8267 16.157 19.626C16.3003 19.3967 16.458 19.282 16.63 19.282C16.802 19.282 16.9597 19.3823 17.103 19.583C17.2463 19.755 17.2607 19.9557 17.146 20.185C16.7733 20.9303 16.2573 21.9193 15.598 23.152C14.9387 24.3847 14.1933 25.474 13.362 26.42C12.4447 27.5093 11.4557 28.3263 10.395 28.871C9.363 29.387 8.13033 29.645 6.697 29.645ZM6.912 20.357C8.202 19.8697 9.33433 18.9953 10.309 17.734C11.3123 16.4727 11.986 15.0823 12.33 13.563C12.3587 13.4197 12.373 13.2907 12.373 13.176C12.4017 13.0613 12.416 12.9467 12.416 12.832C12.416 12.2587 12.244 11.972 11.9 11.972C11.6133 11.972 11.3123 12.1727 10.997 12.574C10.5383 13.1187 10.051 13.864 9.535 14.81C9.019 15.7273 8.56033 16.6303 8.159 17.519C7.75767 18.4077 7.45667 19.0813 7.256 19.54L6.912 20.357ZM14.9523 29.602C14.7803 29.602 14.6083 29.516 14.4363 29.344C14.293 29.2007 14.2357 29.043 14.2643 28.871C14.3503 28.4697 14.508 28.1113 14.7373 27.796C14.9667 27.452 15.153 27.1653 15.2963 26.936C15.7837 26.2193 16.4573 25.3737 17.3173 24.399C18.1773 23.4243 19.1377 22.421 20.1983 21.389C21.259 20.3283 22.334 19.3393 23.4233 18.422C24.5127 17.476 25.516 16.6733 26.4333 16.014C26.5193 15.8133 26.3903 15.67 26.0463 15.584C25.7023 15.4693 25.2723 15.3977 24.7563 15.369C24.269 15.3117 23.7817 15.283 23.2943 15.283C22.721 15.283 22.291 15.3117 22.0043 15.369C21.1443 15.541 20.4133 15.9137 19.8113 16.487C19.2093 17.0317 18.636 17.777 18.0913 18.723C17.5467 19.6403 16.9017 20.7727 16.1563 22.12C16.0417 22.3493 15.9127 22.464 15.7693 22.464C15.54 22.464 15.4253 22.1917 15.4253 21.647C15.4253 21.2743 15.5113 20.916 15.6833 20.572C16.314 19.3107 16.9733 18.0637 17.6613 16.831C18.3493 15.5697 18.894 14.6093 19.2953 13.95C20.0407 12.746 20.7143 11.929 21.3163 11.499C21.947 11.069 22.549 10.854 23.1223 10.854C23.8677 10.854 24.613 11.0403 25.3583 11.413C26.1323 11.757 27.0353 11.9433 28.0673 11.972C28.7267 11.972 29.2427 11.886 29.6153 11.714C29.9307 11.5707 30.1743 11.37 30.3463 11.112C30.5183 10.854 30.6187 10.5817 30.6473 10.295C30.676 10.1517 30.7477 10.0513 30.8623 9.994C31.0057 9.93667 31.1347 9.908 31.2493 9.908C31.5933 9.908 31.7653 10.0657 31.7653 10.381C31.7653 11.9003 31.321 13.3623 30.4323 14.767C29.5437 16.1717 28.2967 17.5763 26.6913 18.981C25.1147 20.357 23.237 21.8333 21.0583 23.41C21.0297 23.4673 21.345 23.6537 22.0043 23.969C22.6923 24.2843 23.4377 24.528 24.2403 24.7C24.5557 24.7573 24.8567 24.8147 25.1433 24.872C25.4587 24.9007 25.7597 24.915 26.0463 24.915C26.7057 24.915 27.322 24.8003 27.8953 24.571C28.4687 24.313 28.956 23.883 29.3573 23.281C29.816 22.6217 30.2317 21.9337 30.6043 21.217C30.977 20.4717 31.235 19.9557 31.3783 19.669C31.4357 19.497 31.5647 19.411 31.7653 19.411C31.966 19.411 32.138 19.497 32.2813 19.669C32.4247 19.841 32.439 20.0417 32.3243 20.271C31.9803 21.0163 31.536 21.8907 30.9913 22.894C30.4467 23.8973 29.859 24.8577 29.2283 25.775C28.6263 26.6923 28.01 27.452 27.3793 28.054C26.9493 28.4553 26.4763 28.742 25.9603 28.914C25.4443 29.086 24.8997 29.172 24.3263 29.172C23.4663 29.172 22.592 29.043 21.7033 28.785C20.8433 28.4983 20.0407 28.226 19.2953 27.968C18.8367 27.796 18.4067 27.6813 18.0053 27.624C17.604 27.538 17.26 27.495 16.9733 27.495C16.6867 27.495 16.3857 27.6813 16.0703 28.054C15.755 28.398 15.5543 28.742 15.4683 29.086C15.3823 29.43 15.2103 29.602 14.9523 29.602Z"
+                            fill="#F8A430" />
+                        <path
+                            d="M53.1943 4.43V9.225H43.1843V14.405H50.6743V19.06H43.1843V29H37.1993V4.43H53.1943ZM59.3499 7.44C58.2999 7.44 57.4366 7.13667 56.7599 6.53C56.1066 5.9 55.7799 5.13 55.7799 4.22C55.7799 3.28667 56.1066 2.51667 56.7599 1.91C57.4366 1.28 58.2999 0.964998 59.3499 0.964998C60.3766 0.964998 61.2166 1.28 61.8699 1.91C62.5466 2.51667 62.8849 3.28667 62.8849 4.22C62.8849 5.13 62.5466 5.9 61.8699 6.53C61.2166 7.13667 60.3766 7.44 59.3499 7.44ZM62.3249 9.47V29H56.3399V9.47H62.3249ZM78.5622 9.26C80.8489 9.26 82.6689 10.0067 84.0222 11.5C85.3989 12.97 86.0872 15 86.0872 17.59V29H80.1372V18.395C80.1372 17.0883 79.7989 16.0733 79.1222 15.35C78.4455 14.6267 77.5355 14.265 76.3922 14.265C75.2489 14.265 74.3389 14.6267 73.6622 15.35C72.9855 16.0733 72.6472 17.0883 72.6472 18.395V29H66.6622V9.47H72.6472V12.06C73.2539 11.1967 74.0705 10.52 75.0972 10.03C76.1239 9.51667 77.2789 9.26 78.5622 9.26ZM89.0562 19.2C89.0562 17.1933 89.4295 15.4317 90.1762 13.915C90.9462 12.3983 91.9845 11.2317 93.2912 10.415C94.5978 9.59833 96.0562 9.19 97.6662 9.19C98.9495 9.19 100.116 9.45833 101.166 9.995C102.24 10.5317 103.08 11.255 103.686 12.165V3.1H109.671V29H103.686V26.2C103.126 27.1333 102.321 27.88 101.271 28.44C100.245 29 99.0428 29.28 97.6662 29.28C96.0562 29.28 94.5978 28.8717 93.2912 28.055C91.9845 27.215 90.9462 26.0367 90.1762 24.52C89.4295 22.98 89.0562 21.2067 89.0562 19.2ZM103.686 19.235C103.686 17.7417 103.266 16.5633 102.426 15.7C101.61 14.8367 100.606 14.405 99.4162 14.405C98.2262 14.405 97.2112 14.8367 96.3712 15.7C95.5545 16.54 95.1462 17.7067 95.1462 19.2C95.1462 20.6933 95.5545 21.8833 96.3712 22.77C97.2112 23.6333 98.2262 24.065 99.4162 24.065C100.606 24.065 101.61 23.6333 102.426 22.77C103.266 21.9067 103.686 20.7283 103.686 19.235ZM132.411 18.92C132.411 19.48 132.376 20.0633 132.306 20.67H118.761C118.854 21.8833 119.239 22.8167 119.916 23.47C120.616 24.1 121.468 24.415 122.471 24.415C123.964 24.415 125.003 23.785 125.586 22.525H131.956C131.629 23.8083 131.034 24.9633 130.171 25.99C129.331 27.0167 128.269 27.8217 126.986 28.405C125.703 28.9883 124.268 29.28 122.681 29.28C120.768 29.28 119.064 28.8717 117.571 28.055C116.078 27.2383 114.911 26.0717 114.071 24.555C113.231 23.0383 112.811 21.265 112.811 19.235C112.811 17.205 113.219 15.4317 114.036 13.915C114.876 12.3983 116.043 11.2317 117.536 10.415C119.029 9.59833 120.744 9.19 122.681 9.19C124.571 9.19 126.251 9.58667 127.721 10.38C129.191 11.1733 130.334 12.305 131.151 13.775C131.991 15.245 132.411 16.96 132.411 18.92ZM126.286 17.345C126.286 16.3183 125.936 15.5017 125.236 14.895C124.536 14.2883 123.661 13.985 122.611 13.985C121.608 13.985 120.756 14.2767 120.056 14.86C119.379 15.4433 118.959 16.2717 118.796 17.345H126.286ZM141.553 12.725C142.253 11.6517 143.128 10.8117 144.178 10.205C145.228 9.575 146.395 9.26 147.678 9.26V15.595H146.033C144.54 15.595 143.42 15.9217 142.673 16.575C141.927 17.205 141.553 18.325 141.553 19.935V29H135.568V9.47H141.553V12.725Z"
+                            fill="black" />
+                    </svg>
+                </a>
+
+                <nav class="nav" id="site__nav">
+                    <ul class="nav__menu">
+                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Find & Hire</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                    <a class="mobileView" href="#" class="cta__btn">Join Now</a>
+                </nav>
+                <div class="cta desktopView">
+                    <a href="#" class="cta__btn desktopView">Join Now</a>
+                </div>
+                <button class="open__nav--toggle mobileView">
+                    <svg class="open__nav--icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                        height="100" viewBox="0 0 50 50">
+                        <path
+                            d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+                        </path>
+                    </svg>
+                    <svg class="close__nav--icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                        height="100" viewBox="0 0 50 50">
+                        <path
+                            d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="banner">
+        <div class="left__shape">
+
+            <svg width="55" height="495" viewBox="0 0 55 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M-1.31021 251.346C13.4379 304.098 70.3799 349.72 50.8173 401.233C30.6201 454.416 -35.631 479.703 -95.2833 498.798C-152.405 517.083 -211.954 518.448 -270.492 504.087C-340.364 486.945 -426.422 471.52 -451.596 411.383C-476.631 351.576 -404.395 298.563 -381.889 237.975C-355.044 165.703 -381.127 69.8039 -309.211 28.0651C-233.591 -15.8236 -118.805 -6.02805 -48.8627 44.6924C15.036 91.0299 -21.1437 180.405 -1.31021 251.346Z"
+                    fill="#7130FA" fill-opacity="0.5" />
+            </svg>
+
+        </div>
+        <div class="banner__container">
+            <div class="banner__content">
+                <h1 class="banner__title">
+                    An easy way to find & hire local workers
+                </h1>
+                <p class="banner__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore.</p>
+                <a href="#" class="banner__cta">Find and Hire
+                    <span class="banner__cta__icon">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.9449 2.37331C10.7683 2.18374 10.6721 1.93302 10.6767 1.67395C10.6813 1.41488 10.7862 1.1677 10.9694 0.984482C11.1526 0.801265 11.3998 0.696316 11.6589 0.691745C11.918 0.687174 12.1687 0.783338 12.3582 0.959978L17.6916 6.29331C17.8788 6.48081 17.984 6.73498 17.984 6.99998C17.984 7.26498 17.8788 7.51914 17.6916 7.70665L12.3582 13.04C12.2667 13.1382 12.1563 13.217 12.0336 13.2717C11.911 13.3263 11.7785 13.3557 11.6443 13.3581C11.51 13.3605 11.3766 13.3358 11.2521 13.2855C11.1276 13.2352 11.0145 13.1603 10.9195 13.0654C10.8246 12.9704 10.7497 12.8573 10.6994 12.7328C10.6491 12.6083 10.6244 12.4749 10.6268 12.3406C10.6292 12.2063 10.6585 12.0739 10.7132 11.9513C10.7679 11.8286 10.8467 11.7182 10.9449 11.6266L14.5716 7.99998H1.65158C1.38636 7.99998 1.13201 7.89462 0.944474 7.70708C0.756938 7.51955 0.651581 7.26519 0.651581 6.99998C0.651581 6.73476 0.756938 6.48041 0.944474 6.29287C1.13201 6.10534 1.38636 5.99998 1.65158 5.99998H14.5716L10.9449 2.37331Z"
+                                fill="white" />
+                        </svg>
+                    </span>
+
+                </a>
+
+            </div>
+            <div class="banner__image-wrapper">
+                <img src="dist/images/user.png" alt="Banner Illustration" class="banner__image" />
+            </div>
+            <div class="right__shape">
+
+                <svg width="210" height="605" viewBox="0 0 210 605" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M598.35 298.754C606.205 352.648 656.897 403.712 630.824 452.917C603.906 503.719 534.828 522.165 473.104 535.124C413.998 547.534 354.661 542.89 298.355 522.723C231.146 498.652 147.637 474.655 130.376 412.373C113.21 350.433 191.806 305.045 221.972 247.119C257.956 178.023 244.399 80.12 321.224 45.9001C402.008 9.9175 514.783 31.2162 577.735 88.6544C635.246 141.129 587.786 226.276 598.35 298.754Z"
+                        fill="#F8A430" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M561.746 210.93C569.601 264.824 620.294 315.888 594.221 365.094C567.302 415.895 498.225 434.341 436.501 447.3C377.394 459.71 318.058 455.066 261.751 434.899C194.543 410.828 111.034 386.831 93.7726 324.55C76.6061 262.609 155.203 217.221 185.369 159.295C221.352 90.1986 207.795 -7.7039 284.621 -41.9239C365.404 -77.9064 478.179 -56.6077 541.131 0.830535C598.643 53.3053 551.183 138.452 561.746 210.93Z"
+                        fill="#7130FA" />
+                </svg>
+
+
+            </div>
+
+        </div>
+    </section>
+    <section class="million__families">
+        <div class="full__container">
+            <div class="site-heading">
+                <h2 class="site-heading--main text-center">
+                    Join 29 million families who've turned
+                </h2>
+            </div>
+            <div class="card-row card-row--small">
+
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-1.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-2.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-3.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-4.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-5.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+                <article class="card card--small">
+                    <figure class="card__figure">
+                        <img src="dist/images/card-img-6.jpg" alt="Handyman John" class="card__image" />
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Handyman</h3>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="services">
+        <div class="full__container">
+            <div class="site-heading">
+                <h2 class="site-heading--small text-center">
+                    Most Booked Services
+                </h2>
+            </div>
+            <div class="services__container" id="cardSlider">
+
+                <article class="card services__card">
+                    <figure class="card__figure">
+                        <a href="#">
+                            <img class="card__image card__image--front" src="dist/images/card-bg-1.jpg" alt="Front" />
+                            <img class="card__image card__image--back" src="dist/images/card-bg-2.jpg" alt="Back" />
+                            <span class="card__image card__image--overlay"></span>
+                            <span class="card__cta">Book Now</span>
+                        </a>
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Bathroom Cleaning</h3>
+                    </div>
+                </article>
+                <article class="card services__card">
+                    <figure class="card__figure">
+                        <a href="#">
+                            <img class="card__image card__image--front" src="dist/images/card-bg-2.jpg" alt="Front" />
+                            <img class="card__image card__image--back" src="dist/images/card-bg-1.jpg" alt="Back" />
+                            <span class="card__image card__image--overlay"></span>
+                            <span class="card__cta">Book Now</span>
+                        </a>
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Bathroom Cleaning</h3>
+                    </div>
+                </article>
+                <article class="card services__card">
+                    <figure class="card__figure">
+                        <a href="#">
+                            <img class="card__image card__image--front" src="dist/images/card-bg-3.jpg" alt="Front" />
+                            <img class="card__image card__image--back" src="dist/images/card-bg-4.jpg" alt="Back" />
+                            <span class="card__image card__image--overlay"></span>
+                            <span class="card__cta">Book Now</span>
+                        </a>
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Bathroom Cleaning</h3>
+                    </div>
+                </article>
+                <article class="card services__card">
+                    <figure class="card__figure">
+                        <a href="#">
+                            <img class="card__image card__image--front" src="dist/images/card-bg-4.jpg" alt="Front" />
+                            <img class="card__image card__image--back" src="dist/images/card-back-img-1.jpg"
+                                alt="Back" />
+                            <span class="card__image card__image--overlay"></span>
+                            <span class="card__cta">Book Now</span>
+                        </a>
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Bathroom Cleaning</h3>
+                    </div>
+                </article>
+                <article class="card services__card">
+                    <figure class="card__figure">
+                        <a href="#">
+                            <img class="card__image card__image--front" src="dist/images/card-bg-1.jpg" alt="Front" />
+                            <img class="card__image card__image--back" src="dist/images/card-back-img-1.jpg"
+                                alt="Back" />
+                            <span class="card__image card__image--overlay"></span>
+                            <span class="card__cta">Book Now</span>
+                        </a>
+                    </figure>
+                    <div class="card__content">
+                        <h3 class="card__name">Bathroom Cleaning</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="reviews">
+        <div class="full__container">
+
+            <div class="reviews__container">
+
+                <!-- Left Side Floating Avatars -->
+                <div class="reviews__avatars">
+                    <h2 class="site-heading--main">
+                        client <br /> feedback
+                    </h2>
+
+                    <img src="dist/images/users.png" alt="User" class="reviews__avatar reviews__avatar--large" />
+                </div>
+
+                <!-- Right Side Cards -->
+                <div class="reviews__cards">
+                    <div class="review__card">
+                        <div class="review__card--user">
+                            <img src="dist/images/client.jpg" alt="User" class="review__card--user-image" />
+                            <div>
+                                <h3 class="review__card--user-name">Jasmine Sharma</h3>
+                                <span class="review__card--user-location">Kolkata</span>
+                            </div>
+                        </div>
+
+                        <div class="review__card--rating-date">
+                            <div class="review__card--stars">
+                                <img src="dist/images/rating-img.png" alt="Rating" />
+                            </div>
+                            <span class="review__card--date">20 Jan, 2025</span>
+                        </div>
+
+                        <div class="review__card--content">
+                            <p>
+                                “Morocco — We travelled Morocco for 15 glorious days. The booking went very smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”“Morocco — We travelled Morocco for 15 glorious days. The booking went very
+                                smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review__card">
+                        <div class="review__card--user">
+                            <img src="dist/images/client.jpg" alt="User" class="review__card--user-image" />
+                            <div>
+                                <h3 class="review__card--user-name">Jasmine Sharma</h3>
+                                <span class="review__card--user-location">Kolkata</span>
+                            </div>
+                        </div>
+
+                        <div class="review__card--rating-date">
+                            <div class="review__card--stars">
+                                <img src="dist/images/rating-img.png" alt="Rating" />
+                            </div>
+                            <span class="review__card--date">20 Jan, 2025</span>
+                        </div>
+
+                        <div class="review__card--content">
+                            <p>
+                                “Morocco — We travelled Morocco for 15 glorious days. The booking went very smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”“Morocco — We travelled Morocco for 15 glorious days. The booking went very
+                                smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review__card">
+                        <div class="review__card--user">
+                            <img src="dist/images/client.jpg" alt="User" class="review__card--user-image" />
+                            <div>
+                                <h3 class="review__card--user-name">Jasmine Sharma</h3>
+                                <span class="review__card--user-location">Kolkata</span>
+                            </div>
+                        </div>
+
+                        <div class="review__card--rating-date">
+                            <div class="review__card--stars">
+                                <img src="dist/images/rating-img.png" alt="Rating" />
+                            </div>
+                            <span class="review__card--date">20 Jan, 2025</span>
+                        </div>
+
+                        <div class="review__card--content">
+                            <p>
+                                “Morocco — We travelled Morocco for 15 glorious days. The booking went very smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”“Morocco — We travelled Morocco for 15 glorious days. The booking went very
+                                smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review__card">
+                        <div class="review__card--user">
+                            <img src="dist/images/client.jpg" alt="User" class="review__card--user-image" />
+                            <div>
+                                <h3 class="review__card--user-name">Jasmine Sharma</h3>
+                                <span class="review__card--user-location">Kolkata</span>
+                            </div>
+                        </div>
+
+                        <div class="review__card--rating-date">
+                            <div class="review__card--stars">
+                                <img src="dist/images/rating-img.png" alt="Rating" />
+                            </div>
+                            <span class="review__card--date">20 Jan, 2025</span>
+                        </div>
+
+                        <div class="review__card--content">
+                            <p>
+                                “Morocco — We travelled Morocco for 15 glorious days. The booking went very smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”“Morocco — We travelled Morocco for 15 glorious days. The booking went very
+                                smoothly and
+                                all
+                                the
+                                requests we made vis-à-vis accommodation and preferred visiting of sites were well taken
+                                care of.”
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- You can duplicate .review__card for more cards -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service__locations">
+        <div class="full__container">
+            <div class="site-heading">
+                <h2 class="site-heading--small text-center">
+                    Join 29 million families who've turned
+                </h2>
+            </div>
+            <div class="card__location--container">
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/location-icon-1.svg" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Kolkata</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/location-icon-1.svg" alt="Bangalore" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Bangalore</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/Hyderabad.svg" alt="Hyderabad" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Hyderabad</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/Coimbatore.svg" alt="Coimbatore" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Coimbatore</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/Mangalore.svg" alt="Mangalore" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Mangalore</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/Madurai.svg" alt="Madurai" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Madurai</h3>
+                    </div>
+                </article>
+                <article class="card__location">
+                    <figure class="card__icon">
+                        <img src="dist/images/Kannur.svg" alt="Kannur" />
+                    </figure>
+                    <div class="card__location--content">
+                        <h3 class="card__location--name">Kannur</h3>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="whyus">
+        <div class="whyus__row">
+            <div class="whyus__left desktopView">
+                <img src="dist/images/what-make-us.jpg" alt="What’s makes us Different">
+            </div>
+
+            <div class="whyus__right">
+                <div class="whyus__heading">
+                    <h2 class="site-heading--main">What makes us Different</h2>
+                    <p class="site-des--main">
+                        With years of industry experience, we bring in-depth knowledge and innovative solutions tailored
+                        to your needs.
+                    </p>
+                </div>
+                <div class="whyus__left mobileView">
+                    <img src="dist/images/what-make-us.jpg" alt="What’s makes us Different">
+                </div>
+                <div class="whyus__cards">
+                    <ul class="whyus__list">
+                        <li class="whyus__card">
+                            <span class="whyus__card--icon">
+                                <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="62" height="62" rx="31" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M26.393 40.1053L26.767 41.502L28.1062 41.1482L27.74 39.7825C27.293 39.8803 26.8446 39.9905 26.393 40.1053ZM25.9197 42.25L28.7766 47.2314L26.573 47.7792L23.9069 43.1609L23.311 40.9371L25.4138 40.3629L25.9197 42.25ZM27.1767 42.4393L29.9871 47.3075C30.1562 47.5993 29.9995 47.9733 29.6612 48.054L26.4473 48.8532C26.213 48.9106 25.9755 48.7942 25.8731 48.5862L22.9448 43.482L22.3054 41.0968C20.7846 41.1093 19.4065 40.0928 19.0046 38.5875L18.1588 35.4295C17.6793 33.6324 18.764 31.7593 20.5565 31.2891C26.632 29.6969 29.32 29.222 33.4898 24.2763C33.288 22.4529 36.4988 21.7577 36.9768 23.5407L38.2043 28.1201C42.2501 27.6313 43.7741 33.328 40.0277 34.9267L41.2475 39.4798C41.7379 41.311 38.5286 42.2328 37.8566 40.5847C34.4286 39.3448 32.4747 38.8979 28.7348 39.5823C29.4456 42.2329 29.7109 41.7719 27.1783 42.4392L27.1767 42.4393ZM37.5245 39.3899L33.797 25.4805C30.8314 28.9986 28.454 30.1731 24.0605 31.4023L26.1307 39.1289C30.5643 37.9929 33.2816 37.8564 37.523 39.3896L37.5245 39.3899ZM25.153 39.3868L23.0843 31.6677L20.7892 32.2729C19.4825 32.6376 18.8385 33.9148 19.1442 35.1997L19.9822 38.3252C20.3205 39.5869 21.6241 40.341 22.8888 40.0028C23.6446 39.801 24.3988 39.5916 25.153 39.3868ZM35.1516 23.5422C34.8055 23.6354 34.4269 23.9224 34.5014 24.2034L38.7721 40.1425C38.9304 40.7337 40.4264 40.3302 40.2681 39.7405C38.845 34.4317 37.4778 29.0717 35.9926 23.7859C35.9134 23.5345 35.4681 23.4631 35.1499 23.5423L35.1516 23.5422ZM38.4679 29.1105L39.7606 33.9354C42.1614 32.7451 41.2923 28.9321 38.4679 29.1105ZM41.9115 26.5422L43.5177 23.7597C43.8513 23.1839 42.9761 22.678 42.6425 23.2538L41.0363 26.0363C40.7026 26.612 41.5779 27.1179 41.9115 26.5422ZM44.5248 30.5817L47.6285 29.7498C48.2726 29.5776 48.0103 28.5999 47.3678 28.7722L44.2641 29.604C43.6201 29.7763 43.8824 30.7539 44.5248 30.5817ZM43.5146 35.2854L46.297 36.8916C46.8728 37.2252 47.3787 36.35 46.8029 36.0163L44.0204 34.4102C43.4447 34.0765 42.9388 34.9518 43.5146 35.2854Z"
+                                        fill="black" />
+                                    <path
+                                        d="M25.1654 23.9761V25.9827C25.1654 26.155 24.9622 26.2466 24.8331 26.1327L22.0721 23.6965C21.8894 23.5353 21.6541 23.4464 21.4105 23.4464H16.5485C14.6155 23.4464 13.0485 21.8794 13.0485 19.9464V16.6172C13.0485 14.6842 14.6155 13.1172 16.5485 13.1172H24.0491C25.9821 13.1172 27.5491 14.6842 27.5491 16.6172V21.5924C27.5491 22.6163 26.719 23.4464 25.6951 23.4464C25.4026 23.4464 25.1654 23.6835 25.1654 23.9761Z"
+                                        stroke="#D20000" stroke-width="1.5" />
+                                    <path d="M16.2263 19.6016H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M16.2263 17.2166H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </span>
+                            <h3 class="whyus__card--title">Best for Advertising</h3>
+                            <p class="whyus__card--desc">
+                                With years of industry experience, we bring in-depth knowledge and innovative solutions
+                                tailored to your needs.
+                            </p>
+                        </li>
+                        <li class="whyus__card">
+                            <span class="whyus__card--icon">
+                                <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="62" height="62" rx="31" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M26.393 40.1053L26.767 41.502L28.1062 41.1482L27.74 39.7825C27.293 39.8803 26.8446 39.9905 26.393 40.1053ZM25.9197 42.25L28.7766 47.2314L26.573 47.7792L23.9069 43.1609L23.311 40.9371L25.4138 40.3629L25.9197 42.25ZM27.1767 42.4393L29.9871 47.3075C30.1562 47.5993 29.9995 47.9733 29.6612 48.054L26.4473 48.8532C26.213 48.9106 25.9755 48.7942 25.8731 48.5862L22.9448 43.482L22.3054 41.0968C20.7846 41.1093 19.4065 40.0928 19.0046 38.5875L18.1588 35.4295C17.6793 33.6324 18.764 31.7593 20.5565 31.2891C26.632 29.6969 29.32 29.222 33.4898 24.2763C33.288 22.4529 36.4988 21.7577 36.9768 23.5407L38.2043 28.1201C42.2501 27.6313 43.7741 33.328 40.0277 34.9267L41.2475 39.4798C41.7379 41.311 38.5286 42.2328 37.8566 40.5847C34.4286 39.3448 32.4747 38.8979 28.7348 39.5823C29.4456 42.2329 29.7109 41.7719 27.1783 42.4392L27.1767 42.4393ZM37.5245 39.3899L33.797 25.4805C30.8314 28.9986 28.454 30.1731 24.0605 31.4023L26.1307 39.1289C30.5643 37.9929 33.2816 37.8564 37.523 39.3896L37.5245 39.3899ZM25.153 39.3868L23.0843 31.6677L20.7892 32.2729C19.4825 32.6376 18.8385 33.9148 19.1442 35.1997L19.9822 38.3252C20.3205 39.5869 21.6241 40.341 22.8888 40.0028C23.6446 39.801 24.3988 39.5916 25.153 39.3868ZM35.1516 23.5422C34.8055 23.6354 34.4269 23.9224 34.5014 24.2034L38.7721 40.1425C38.9304 40.7337 40.4264 40.3302 40.2681 39.7405C38.845 34.4317 37.4778 29.0717 35.9926 23.7859C35.9134 23.5345 35.4681 23.4631 35.1499 23.5423L35.1516 23.5422ZM38.4679 29.1105L39.7606 33.9354C42.1614 32.7451 41.2923 28.9321 38.4679 29.1105ZM41.9115 26.5422L43.5177 23.7597C43.8513 23.1839 42.9761 22.678 42.6425 23.2538L41.0363 26.0363C40.7026 26.612 41.5779 27.1179 41.9115 26.5422ZM44.5248 30.5817L47.6285 29.7498C48.2726 29.5776 48.0103 28.5999 47.3678 28.7722L44.2641 29.604C43.6201 29.7763 43.8824 30.7539 44.5248 30.5817ZM43.5146 35.2854L46.297 36.8916C46.8728 37.2252 47.3787 36.35 46.8029 36.0163L44.0204 34.4102C43.4447 34.0765 42.9388 34.9518 43.5146 35.2854Z"
+                                        fill="black" />
+                                    <path
+                                        d="M25.1654 23.9761V25.9827C25.1654 26.155 24.9622 26.2466 24.8331 26.1327L22.0721 23.6965C21.8894 23.5353 21.6541 23.4464 21.4105 23.4464H16.5485C14.6155 23.4464 13.0485 21.8794 13.0485 19.9464V16.6172C13.0485 14.6842 14.6155 13.1172 16.5485 13.1172H24.0491C25.9821 13.1172 27.5491 14.6842 27.5491 16.6172V21.5924C27.5491 22.6163 26.719 23.4464 25.6951 23.4464C25.4026 23.4464 25.1654 23.6835 25.1654 23.9761Z"
+                                        stroke="#D20000" stroke-width="1.5" />
+                                    <path d="M16.2263 19.6016H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M16.2263 17.2166H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </span>
+                            <h3 class="whyus__card--title">Best for Advertising</h3>
+                            <p class="whyus__card--desc">
+                                With years of industry experience, we bring in-depth knowledge and innovative solutions
+                                tailored to your needs.
+                            </p>
+                        </li>
+                        <li class="whyus__card">
+                            <span class="whyus__card--icon">
+                                <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="62" height="62" rx="31" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M26.393 40.1053L26.767 41.502L28.1062 41.1482L27.74 39.7825C27.293 39.8803 26.8446 39.9905 26.393 40.1053ZM25.9197 42.25L28.7766 47.2314L26.573 47.7792L23.9069 43.1609L23.311 40.9371L25.4138 40.3629L25.9197 42.25ZM27.1767 42.4393L29.9871 47.3075C30.1562 47.5993 29.9995 47.9733 29.6612 48.054L26.4473 48.8532C26.213 48.9106 25.9755 48.7942 25.8731 48.5862L22.9448 43.482L22.3054 41.0968C20.7846 41.1093 19.4065 40.0928 19.0046 38.5875L18.1588 35.4295C17.6793 33.6324 18.764 31.7593 20.5565 31.2891C26.632 29.6969 29.32 29.222 33.4898 24.2763C33.288 22.4529 36.4988 21.7577 36.9768 23.5407L38.2043 28.1201C42.2501 27.6313 43.7741 33.328 40.0277 34.9267L41.2475 39.4798C41.7379 41.311 38.5286 42.2328 37.8566 40.5847C34.4286 39.3448 32.4747 38.8979 28.7348 39.5823C29.4456 42.2329 29.7109 41.7719 27.1783 42.4392L27.1767 42.4393ZM37.5245 39.3899L33.797 25.4805C30.8314 28.9986 28.454 30.1731 24.0605 31.4023L26.1307 39.1289C30.5643 37.9929 33.2816 37.8564 37.523 39.3896L37.5245 39.3899ZM25.153 39.3868L23.0843 31.6677L20.7892 32.2729C19.4825 32.6376 18.8385 33.9148 19.1442 35.1997L19.9822 38.3252C20.3205 39.5869 21.6241 40.341 22.8888 40.0028C23.6446 39.801 24.3988 39.5916 25.153 39.3868ZM35.1516 23.5422C34.8055 23.6354 34.4269 23.9224 34.5014 24.2034L38.7721 40.1425C38.9304 40.7337 40.4264 40.3302 40.2681 39.7405C38.845 34.4317 37.4778 29.0717 35.9926 23.7859C35.9134 23.5345 35.4681 23.4631 35.1499 23.5423L35.1516 23.5422ZM38.4679 29.1105L39.7606 33.9354C42.1614 32.7451 41.2923 28.9321 38.4679 29.1105ZM41.9115 26.5422L43.5177 23.7597C43.8513 23.1839 42.9761 22.678 42.6425 23.2538L41.0363 26.0363C40.7026 26.612 41.5779 27.1179 41.9115 26.5422ZM44.5248 30.5817L47.6285 29.7498C48.2726 29.5776 48.0103 28.5999 47.3678 28.7722L44.2641 29.604C43.6201 29.7763 43.8824 30.7539 44.5248 30.5817ZM43.5146 35.2854L46.297 36.8916C46.8728 37.2252 47.3787 36.35 46.8029 36.0163L44.0204 34.4102C43.4447 34.0765 42.9388 34.9518 43.5146 35.2854Z"
+                                        fill="black" />
+                                    <path
+                                        d="M25.1654 23.9761V25.9827C25.1654 26.155 24.9622 26.2466 24.8331 26.1327L22.0721 23.6965C21.8894 23.5353 21.6541 23.4464 21.4105 23.4464H16.5485C14.6155 23.4464 13.0485 21.8794 13.0485 19.9464V16.6172C13.0485 14.6842 14.6155 13.1172 16.5485 13.1172H24.0491C25.9821 13.1172 27.5491 14.6842 27.5491 16.6172V21.5924C27.5491 22.6163 26.719 23.4464 25.6951 23.4464C25.4026 23.4464 25.1654 23.6835 25.1654 23.9761Z"
+                                        stroke="#D20000" stroke-width="1.5" />
+                                    <path d="M16.2263 19.6016H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M16.2263 17.2166H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </span>
+                            <h3 class="whyus__card--title">Best for Advertising</h3>
+                            <p class="whyus__card--desc">
+                                With years of industry experience, we bring in-depth knowledge and innovative solutions
+                                tailored to your needs.
+                            </p>
+                        </li>
+                        <li class="whyus__card">
+                            <span class="whyus__card--icon">
+                                <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="62" height="62" rx="31" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M26.393 40.1053L26.767 41.502L28.1062 41.1482L27.74 39.7825C27.293 39.8803 26.8446 39.9905 26.393 40.1053ZM25.9197 42.25L28.7766 47.2314L26.573 47.7792L23.9069 43.1609L23.311 40.9371L25.4138 40.3629L25.9197 42.25ZM27.1767 42.4393L29.9871 47.3075C30.1562 47.5993 29.9995 47.9733 29.6612 48.054L26.4473 48.8532C26.213 48.9106 25.9755 48.7942 25.8731 48.5862L22.9448 43.482L22.3054 41.0968C20.7846 41.1093 19.4065 40.0928 19.0046 38.5875L18.1588 35.4295C17.6793 33.6324 18.764 31.7593 20.5565 31.2891C26.632 29.6969 29.32 29.222 33.4898 24.2763C33.288 22.4529 36.4988 21.7577 36.9768 23.5407L38.2043 28.1201C42.2501 27.6313 43.7741 33.328 40.0277 34.9267L41.2475 39.4798C41.7379 41.311 38.5286 42.2328 37.8566 40.5847C34.4286 39.3448 32.4747 38.8979 28.7348 39.5823C29.4456 42.2329 29.7109 41.7719 27.1783 42.4392L27.1767 42.4393ZM37.5245 39.3899L33.797 25.4805C30.8314 28.9986 28.454 30.1731 24.0605 31.4023L26.1307 39.1289C30.5643 37.9929 33.2816 37.8564 37.523 39.3896L37.5245 39.3899ZM25.153 39.3868L23.0843 31.6677L20.7892 32.2729C19.4825 32.6376 18.8385 33.9148 19.1442 35.1997L19.9822 38.3252C20.3205 39.5869 21.6241 40.341 22.8888 40.0028C23.6446 39.801 24.3988 39.5916 25.153 39.3868ZM35.1516 23.5422C34.8055 23.6354 34.4269 23.9224 34.5014 24.2034L38.7721 40.1425C38.9304 40.7337 40.4264 40.3302 40.2681 39.7405C38.845 34.4317 37.4778 29.0717 35.9926 23.7859C35.9134 23.5345 35.4681 23.4631 35.1499 23.5423L35.1516 23.5422ZM38.4679 29.1105L39.7606 33.9354C42.1614 32.7451 41.2923 28.9321 38.4679 29.1105ZM41.9115 26.5422L43.5177 23.7597C43.8513 23.1839 42.9761 22.678 42.6425 23.2538L41.0363 26.0363C40.7026 26.612 41.5779 27.1179 41.9115 26.5422ZM44.5248 30.5817L47.6285 29.7498C48.2726 29.5776 48.0103 28.5999 47.3678 28.7722L44.2641 29.604C43.6201 29.7763 43.8824 30.7539 44.5248 30.5817ZM43.5146 35.2854L46.297 36.8916C46.8728 37.2252 47.3787 36.35 46.8029 36.0163L44.0204 34.4102C43.4447 34.0765 42.9388 34.9518 43.5146 35.2854Z"
+                                        fill="black" />
+                                    <path
+                                        d="M25.1654 23.9761V25.9827C25.1654 26.155 24.9622 26.2466 24.8331 26.1327L22.0721 23.6965C21.8894 23.5353 21.6541 23.4464 21.4105 23.4464H16.5485C14.6155 23.4464 13.0485 21.8794 13.0485 19.9464V16.6172C13.0485 14.6842 14.6155 13.1172 16.5485 13.1172H24.0491C25.9821 13.1172 27.5491 14.6842 27.5491 16.6172V21.5924C27.5491 22.6163 26.719 23.4464 25.6951 23.4464C25.4026 23.4464 25.1654 23.6835 25.1654 23.9761Z"
+                                        stroke="#D20000" stroke-width="1.5" />
+                                    <path d="M16.2263 19.6016H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M16.2263 17.2166H24.5691" stroke="#D20000" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                            </span>
+                            <h3 class="whyus__card--title">Best for Advertising</h3>
+                            <p class="whyus__card--desc">
+                                With years of industry experience, we bring in-depth knowledge and innovative solutions
+                                tailored to your needs.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq__container full__container">
+            <div class="site-heading text-center">
+                <h2 class="site-heading--main small-heading ">
+                    Frequently Asked Questions
+                </h2>
+                <p class="site-des--main mt-24">
+                    Check below for FAQs about the fundamentals course.
+                </p>
+            </div>
+
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        What services do you offer?
+
+                    </button>
+                    <div class="faq__answer">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        How can I book a service?
+                    </button>
+                    <div class="faq__answer">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        Are your professionals background-checked?
+                    </button>
+                    <div class="faq__answer">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        Are your professionals background-checked?
+                    </button>
+                    <div class="faq__answer">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" aria-expanded="false">
+                        Are your professionals background-checked?
+                    </button>
+                    <div class="faq__answer">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site__footer">
+        <div class="site__footer__container full__container">
+            <div class="site__footer__logo">
+                <a href="">
+                    <svg width="148" height="30" viewBox="0 0 148 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.697 29.645C4.60433 29.645 3.085 29.172 2.139 28.226C1.22167 27.28 0.763 26.033 0.763 24.485C0.763 23.3097 1.00667 22.0197 1.494 20.615C1.86667 19.4683 2.36833 18.3073 2.999 17.132C3.62967 15.928 4.36067 14.8243 5.192 13.821C6.02333 12.789 6.94067 11.972 7.944 11.37C8.94733 10.7393 10.008 10.424 11.126 10.424C12.5593 10.424 13.7203 10.6533 14.609 11.112C15.5263 11.542 15.985 12.2587 15.985 13.262C15.985 14.0073 15.684 14.939 15.082 16.057C14.2793 17.605 13.104 18.8807 11.556 19.884C10.008 20.8873 8.27367 21.4607 6.353 21.604C5.923 22.7793 5.665 23.7397 5.579 24.485C5.55033 24.6283 5.536 24.7717 5.536 24.915C5.536 25.0297 5.536 25.1587 5.536 25.302C5.536 26.248 5.751 26.936 6.181 27.366C6.611 27.7673 7.14133 27.968 7.772 27.968C8.94733 27.968 9.97933 27.667 10.868 27.065C11.7567 26.463 12.5307 25.7033 13.19 24.786C13.878 23.8687 14.4657 22.9513 14.953 22.034C15.2397 21.518 15.4833 21.045 15.684 20.615C15.8847 20.1563 16.0423 19.8267 16.157 19.626C16.3003 19.3967 16.458 19.282 16.63 19.282C16.802 19.282 16.9597 19.3823 17.103 19.583C17.2463 19.755 17.2607 19.9557 17.146 20.185C16.7733 20.9303 16.2573 21.9193 15.598 23.152C14.9387 24.3847 14.1933 25.474 13.362 26.42C12.4447 27.5093 11.4557 28.3263 10.395 28.871C9.363 29.387 8.13033 29.645 6.697 29.645ZM6.912 20.357C8.202 19.8697 9.33433 18.9953 10.309 17.734C11.3123 16.4727 11.986 15.0823 12.33 13.563C12.3587 13.4197 12.373 13.2907 12.373 13.176C12.4017 13.0613 12.416 12.9467 12.416 12.832C12.416 12.2587 12.244 11.972 11.9 11.972C11.6133 11.972 11.3123 12.1727 10.997 12.574C10.5383 13.1187 10.051 13.864 9.535 14.81C9.019 15.7273 8.56033 16.6303 8.159 17.519C7.75767 18.4077 7.45667 19.0813 7.256 19.54L6.912 20.357ZM14.9523 29.602C14.7803 29.602 14.6083 29.516 14.4363 29.344C14.293 29.2007 14.2357 29.043 14.2643 28.871C14.3503 28.4697 14.508 28.1113 14.7373 27.796C14.9667 27.452 15.153 27.1653 15.2963 26.936C15.7837 26.2193 16.4573 25.3737 17.3173 24.399C18.1773 23.4243 19.1377 22.421 20.1983 21.389C21.259 20.3283 22.334 19.3393 23.4233 18.422C24.5127 17.476 25.516 16.6733 26.4333 16.014C26.5193 15.8133 26.3903 15.67 26.0463 15.584C25.7023 15.4693 25.2723 15.3977 24.7563 15.369C24.269 15.3117 23.7817 15.283 23.2943 15.283C22.721 15.283 22.291 15.3117 22.0043 15.369C21.1443 15.541 20.4133 15.9137 19.8113 16.487C19.2093 17.0317 18.636 17.777 18.0913 18.723C17.5467 19.6403 16.9017 20.7727 16.1563 22.12C16.0417 22.3493 15.9127 22.464 15.7693 22.464C15.54 22.464 15.4253 22.1917 15.4253 21.647C15.4253 21.2743 15.5113 20.916 15.6833 20.572C16.314 19.3107 16.9733 18.0637 17.6613 16.831C18.3493 15.5697 18.894 14.6093 19.2953 13.95C20.0407 12.746 20.7143 11.929 21.3163 11.499C21.947 11.069 22.549 10.854 23.1223 10.854C23.8677 10.854 24.613 11.0403 25.3583 11.413C26.1323 11.757 27.0353 11.9433 28.0673 11.972C28.7267 11.972 29.2427 11.886 29.6153 11.714C29.9307 11.5707 30.1743 11.37 30.3463 11.112C30.5183 10.854 30.6187 10.5817 30.6473 10.295C30.676 10.1517 30.7477 10.0513 30.8623 9.994C31.0057 9.93667 31.1347 9.908 31.2493 9.908C31.5933 9.908 31.7653 10.0657 31.7653 10.381C31.7653 11.9003 31.321 13.3623 30.4323 14.767C29.5437 16.1717 28.2967 17.5763 26.6913 18.981C25.1147 20.357 23.237 21.8333 21.0583 23.41C21.0297 23.4673 21.345 23.6537 22.0043 23.969C22.6923 24.2843 23.4377 24.528 24.2403 24.7C24.5557 24.7573 24.8567 24.8147 25.1433 24.872C25.4587 24.9007 25.7597 24.915 26.0463 24.915C26.7057 24.915 27.322 24.8003 27.8953 24.571C28.4687 24.313 28.956 23.883 29.3573 23.281C29.816 22.6217 30.2317 21.9337 30.6043 21.217C30.977 20.4717 31.235 19.9557 31.3783 19.669C31.4357 19.497 31.5647 19.411 31.7653 19.411C31.966 19.411 32.138 19.497 32.2813 19.669C32.4247 19.841 32.439 20.0417 32.3243 20.271C31.9803 21.0163 31.536 21.8907 30.9913 22.894C30.4467 23.8973 29.859 24.8577 29.2283 25.775C28.6263 26.6923 28.01 27.452 27.3793 28.054C26.9493 28.4553 26.4763 28.742 25.9603 28.914C25.4443 29.086 24.8997 29.172 24.3263 29.172C23.4663 29.172 22.592 29.043 21.7033 28.785C20.8433 28.4983 20.0407 28.226 19.2953 27.968C18.8367 27.796 18.4067 27.6813 18.0053 27.624C17.604 27.538 17.26 27.495 16.9733 27.495C16.6867 27.495 16.3857 27.6813 16.0703 28.054C15.755 28.398 15.5543 28.742 15.4683 29.086C15.3823 29.43 15.2103 29.602 14.9523 29.602Z"
+                            fill="#F8A430" />
+                        <path
+                            d="M53.1943 4.43V9.225H43.1843V14.405H50.6743V19.06H43.1843V29H37.1993V4.43H53.1943ZM59.3499 7.44C58.2999 7.44 57.4366 7.13667 56.7599 6.53C56.1066 5.9 55.7799 5.13 55.7799 4.22C55.7799 3.28667 56.1066 2.51667 56.7599 1.91C57.4366 1.28 58.2999 0.964998 59.3499 0.964998C60.3766 0.964998 61.2166 1.28 61.8699 1.91C62.5466 2.51667 62.8849 3.28667 62.8849 4.22C62.8849 5.13 62.5466 5.9 61.8699 6.53C61.2166 7.13667 60.3766 7.44 59.3499 7.44ZM62.3249 9.47V29H56.3399V9.47H62.3249ZM78.5622 9.26C80.8489 9.26 82.6689 10.0067 84.0222 11.5C85.3989 12.97 86.0872 15 86.0872 17.59V29H80.1372V18.395C80.1372 17.0883 79.7989 16.0733 79.1222 15.35C78.4455 14.6267 77.5355 14.265 76.3922 14.265C75.2489 14.265 74.3389 14.6267 73.6622 15.35C72.9855 16.0733 72.6472 17.0883 72.6472 18.395V29H66.6622V9.47H72.6472V12.06C73.2539 11.1967 74.0705 10.52 75.0972 10.03C76.1239 9.51667 77.2789 9.26 78.5622 9.26ZM89.0562 19.2C89.0562 17.1933 89.4295 15.4317 90.1762 13.915C90.9462 12.3983 91.9845 11.2317 93.2912 10.415C94.5978 9.59833 96.0562 9.19 97.6662 9.19C98.9495 9.19 100.116 9.45833 101.166 9.995C102.24 10.5317 103.08 11.255 103.686 12.165V3.1H109.671V29H103.686V26.2C103.126 27.1333 102.321 27.88 101.271 28.44C100.245 29 99.0428 29.28 97.6662 29.28C96.0562 29.28 94.5978 28.8717 93.2912 28.055C91.9845 27.215 90.9462 26.0367 90.1762 24.52C89.4295 22.98 89.0562 21.2067 89.0562 19.2ZM103.686 19.235C103.686 17.7417 103.266 16.5633 102.426 15.7C101.61 14.8367 100.606 14.405 99.4162 14.405C98.2262 14.405 97.2112 14.8367 96.3712 15.7C95.5545 16.54 95.1462 17.7067 95.1462 19.2C95.1462 20.6933 95.5545 21.8833 96.3712 22.77C97.2112 23.6333 98.2262 24.065 99.4162 24.065C100.606 24.065 101.61 23.6333 102.426 22.77C103.266 21.9067 103.686 20.7283 103.686 19.235ZM132.411 18.92C132.411 19.48 132.376 20.0633 132.306 20.67H118.761C118.854 21.8833 119.239 22.8167 119.916 23.47C120.616 24.1 121.468 24.415 122.471 24.415C123.964 24.415 125.003 23.785 125.586 22.525H131.956C131.629 23.8083 131.034 24.9633 130.171 25.99C129.331 27.0167 128.269 27.8217 126.986 28.405C125.703 28.9883 124.268 29.28 122.681 29.28C120.768 29.28 119.064 28.8717 117.571 28.055C116.078 27.2383 114.911 26.0717 114.071 24.555C113.231 23.0383 112.811 21.265 112.811 19.235C112.811 17.205 113.219 15.4317 114.036 13.915C114.876 12.3983 116.043 11.2317 117.536 10.415C119.029 9.59833 120.744 9.19 122.681 9.19C124.571 9.19 126.251 9.58667 127.721 10.38C129.191 11.1733 130.334 12.305 131.151 13.775C131.991 15.245 132.411 16.96 132.411 18.92ZM126.286 17.345C126.286 16.3183 125.936 15.5017 125.236 14.895C124.536 14.2883 123.661 13.985 122.611 13.985C121.608 13.985 120.756 14.2767 120.056 14.86C119.379 15.4433 118.959 16.2717 118.796 17.345H126.286ZM141.553 12.725C142.253 11.6517 143.128 10.8117 144.178 10.205C145.228 9.575 146.395 9.26 147.678 9.26V15.595H146.033C144.54 15.595 143.42 15.9217 142.673 16.575C141.927 17.205 141.553 18.325 141.553 19.935V29H135.568V9.47H141.553V12.725Z"
+                            fill="white" />
+                    </svg>
+
+
+                </a>
+            </div>
+            <div class="site__footer__right">
+                <div class="site__footer__top">
+                    <div class="site__footer__nav">
+                        <ul>
+                            <li>
+                                <a href="">Company</a>
+                            </li>
+                            <li>
+                                <a href="">Resources</a>
+                            </li>
+                            <li>
+                                <a href="">Carreers</a>
+                            </li>
+                            <li>
+                                <a href="">Company</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="site__footer__bottom">
+                    <div class="site__footer__copyright">
+                        <p> © 2025 ez Finder, all rights served.</p>
+                    </div>
+                    <div class="site__footer__socials">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <svg width="72" height="19" viewBox="0 0 72 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M28.4143 11.0428L32.3872 15.9285H29.25L25.7143 11.4415V15.9285H23.1428V3.07147H25.7143V10.6315L28.98 6.92853H32.2585L28.4143 11.0428ZM18.1285 6.67147C17.5655 6.6799 17.0129 6.82466 16.5181 7.09335C16.0232 7.36204 15.6009 7.74666 15.2872 8.21427V6.92853H12.8572V15.9285H15.4285V11.7243C15.3948 11.4191 15.4242 11.1103 15.5149 10.817C15.6057 10.5236 15.7558 10.2522 15.956 10.0194C16.1562 9.78662 16.4022 9.59755 16.6786 9.46394C16.955 9.33034 17.256 9.25506 17.5628 9.2428C19.0543 9.2428 19.2857 10.7085 19.2857 11.7243V15.9285H21.8572V11.1585C21.8572 8.33 20.9185 6.67147 18.18 6.67147H18.1285ZM41.1428 11.6343C41.1526 11.8227 41.1526 12.0116 41.1428 12.2H34.3928V12.29C34.5024 12.8262 34.7994 13.3057 35.2306 13.6427C35.6618 13.9796 36.199 14.1519 36.7457 14.1285C37.1795 14.1474 37.6125 14.0786 38.019 13.9261C38.4255 13.7737 38.7971 13.5408 39.1115 13.2415L40.8215 14.5272C40.2795 15.0803 39.6276 15.5136 38.9079 15.7993C38.1881 16.0849 37.4165 16.2166 36.6428 16.1857C36.002 16.2262 35.36 16.1287 34.7602 15.8999C34.1603 15.671 33.6165 15.316 33.1656 14.859C32.7147 14.402 32.3671 13.8535 32.1463 13.2506C31.9255 12.6477 31.8366 12.0044 31.8857 11.3643C31.8726 10.7323 31.9897 10.1044 32.2299 9.51971C32.47 8.93501 32.828 8.40603 33.2815 7.96576C33.7351 7.52548 34.2745 7.18334 34.866 6.96067C35.4576 6.73799 36.0887 6.63954 36.72 6.67147C39.1372 6.67147 41.1428 8.38147 41.1428 11.6343ZM38.7515 10.5285C38.742 10.2739 38.6808 10.0238 38.5716 9.79354C38.4623 9.56329 38.3074 9.3577 38.1161 9.18929C37.9248 9.02087 37.7013 8.89317 37.4591 8.81395C37.2168 8.73474 36.961 8.70568 36.7072 8.72853C35.5766 8.60633 34.5527 9.40269 34.3928 10.5285H38.7515ZM2.57147 3.07147H0V15.9285H7.71427V13.3573H2.57147V3.07147ZM48.8572 3.07147H51.4285V15.9285H48.9985V15.0285C48.69 15.4087 48.2967 15.7114 47.8502 15.9123C47.4037 16.1132 46.9164 16.2069 46.4272 16.1857C45.8296 16.1704 45.2414 16.033 44.6988 15.782C44.1562 15.5309 43.6707 15.1716 43.2721 14.726C42.8736 14.2805 42.5703 13.7581 42.381 13.191C42.1917 12.624 42.1204 12.0242 42.1715 11.4285C42.1108 10.832 42.1749 10.2295 42.3598 9.6591C42.5446 9.08874 42.8462 8.56311 43.2453 8.11566C43.6444 7.6682 44.1322 7.30872 44.6778 7.06008C45.2234 6.81145 45.8147 6.6791 46.4143 6.67147C46.8608 6.6519 47.3068 6.7214 47.7262 6.87592C48.1456 7.03044 48.5301 7.26688 48.8572 7.57147V3.07147ZM49.05 11.4285C49.0904 11.1316 49.0667 10.8295 48.9805 10.5426C48.8943 10.2556 48.7475 9.9905 48.5501 9.76508C48.3527 9.53966 48.1093 9.35919 47.8362 9.23583C47.5632 9.11248 47.2668 9.04911 46.9672 9.05C45.7372 9.1393 44.8051 10.1971 44.8715 11.4285C44.8051 12.66 45.7372 13.7179 46.9672 13.8072C47.2668 13.8081 47.5632 13.7447 47.8363 13.6214C48.1093 13.498 48.3528 13.3175 48.5502 13.0921C48.7476 12.8666 48.8943 12.6015 48.9805 12.3145C49.0668 12.0276 49.0905 11.7254 49.05 11.4285ZM10.2857 2.81427C9.87223 2.82013 9.47635 2.98267 9.17804 3.26908C8.87973 3.55549 8.70121 3.94442 8.67853 4.35734C8.67853 5.24483 9.39811 5.96441 10.2857 5.96441C11.1734 5.96441 11.8927 5.24469 11.8927 4.35734C11.8699 3.94447 11.6914 3.55559 11.3931 3.26922C11.0949 2.98284 10.699 2.8203 10.2856 2.81441M9 15.9285H11.5715V6.92853H9V15.9285ZM72 1.78573V17.2143C72 17.5553 71.8645 17.8823 71.6234 18.1234C71.3823 18.3645 71.0553 18.5 70.7143 18.5H55.2857C54.9447 18.5 54.6177 18.3645 54.3766 18.1234C54.1355 17.8823 54 17.5553 54 17.2143V1.78573C54 1.44474 54.1355 1.1177 54.3766 0.876583C54.6177 0.635461 54.9447 0.5 55.2857 0.5H70.7143C71.0553 0.5 71.3823 0.635461 71.6234 0.876583C71.8645 1.1177 72 1.44474 72 1.78573ZM59.1428 6.92853H56.5715V15.9285H59.1428V6.92853ZM59.4643 4.3572C59.4643 3.46958 58.7447 2.75 57.8572 2.75C56.9696 2.75 56.25 3.46958 56.25 4.3572C56.25 5.24469 56.9696 5.96427 57.8572 5.96427C58.7447 5.96427 59.4643 5.24469 59.4643 4.3572ZM69.4285 11.1585C69.4285 8.33 68.49 6.67147 65.7515 6.67147C65.1797 6.67152 64.6167 6.81228 64.1122 7.08134C63.6077 7.35039 63.1771 7.73948 62.8585 8.21427V6.92853H60.4285V15.9285H63V11.7243C62.9662 11.4191 62.9956 11.1103 63.0864 10.817C63.1771 10.5236 63.3273 10.2522 63.5275 10.0194C63.7277 9.78662 63.9737 9.59755 64.2501 9.46394C64.5265 9.33034 64.8275 9.25506 65.1343 9.2428C66.6257 9.2428 66.8572 10.7085 66.8572 11.7243V15.9285H69.4285V11.1585Z"
+                                            fill="white" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== LINK TO JS ========== -->
+    <script type="module" src="./dist/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+//
+
+$breakpoints: (
+    "xxxl": 1919px,
+    // ↓ below 1920
+    "xxl" : 1439px,
+    // ↓ below 1440
+    "xl" : 1299px,
+    // ↓ below 1300
+    "lg" : 1199px,
+    // ↓ below 1200
+    "md" : 991px,
+    // ↓ below 992
+    "sm" : 767px,
+    // ↓ below 768
+    "xs" : 575px // ↓ below 576
+);
+
+
+
+// Mixin for max-width media queries
+@mixin respond($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "⚠️ Breakpoint '#{$breakpoint}' not found.";
+    }
+}

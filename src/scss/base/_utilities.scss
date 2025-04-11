@@ -1,0 +1,98 @@
+@use '../abstracts/index' as *; // ✅ This brings in mixins and variables
+
+
+/* _utilities.scss */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mt-24 {
+    margin-top: 24px !important;
+}
+
+
+.full__container {
+    @include site-container;
+
+    @include respond(xl) {
+        padding: 0 40px;
+    }
+
+    @include respond(sm) {
+        padding: 0 15px;
+    }
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.site-heading {
+    padding-bottom: 40px;
+}
+
+.site-heading--main {
+    @include heading-main;
+
+    @include respond(xl) {
+        font-size: 36px;
+    }
+
+    @include respond(sm) {
+        font-size: 26px;
+    }
+}
+
+.site-heading--small {
+    @include heading-small;
+}
+
+.site-des--main {
+    @include desc-main;
+}
+
+.mobileView {
+    display: none !important;
+}
+
+.body--hidden {
+    overflow: hidden !important;
+}
+
+.body--hidden::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+
+@include respond(sm) {
+    .mobileView {
+        display: block !important;
+    }
+
+    .desktopView {
+        display: none !important;
+    }
+
+}

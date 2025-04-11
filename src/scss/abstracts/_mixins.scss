@@ -1,0 +1,36 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin site-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 60px;
+
+
+}
+
+// Typography Mixins
+@mixin heading-main {
+    font-size: 36px;
+    font-weight: 600;
+    color: #101010;
+    text-transform: capitalize;
+}
+
+@mixin heading-small {
+    font-size: 24px;
+    font-weight: 600;
+    color: #101010;
+    text-transform: capitalize;
+}
+
+@mixin desc-main {
+    font-size: 16px;
+    color: #101010;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.4;
+}
