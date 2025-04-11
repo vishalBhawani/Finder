@@ -647,6 +647,7 @@
         display: flex;
         flex-direction: column;
         gap: 28px;
+        background-color: red;
     }
 
     &__item {
@@ -655,8 +656,6 @@
         border-radius: 8px;
         background-color: #fff;
     }
-
-
 
     &__question {
         background: none;
